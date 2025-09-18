@@ -7,22 +7,22 @@ const Metrics = () => {
     {
       title: "Faster Deployments",
       value: 75,
-      suffix: "", // removed %
+      suffix: "%",
       description: "Improvement in deployment speed",
       color: "text-cyan-400",
     },
     {
       title: "Uptime Achieved",
       value: 99.9,
-      suffix: "", // removed %
+      suffix: "%",
       description: "Service availability maintained",
       color: "text-green-400",
     },
     {
-      title: "Projects Completed",
+      title: "Pipelines Automated",
       value: 500,
-      suffix: "", // removed +
-      description: "Successful project deliveries",
+      suffix: "+",
+      description: "Automated CI/CD pipelines",
       color: "text-blue-400",
     },
   ];
@@ -43,7 +43,7 @@ const Metrics = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Quantified improvements in deployment efficiency, reliability, and
-            team productivity
+            automation scalability
           </p>
         </motion.div>
 
@@ -67,7 +67,7 @@ const Metrics = () => {
                   end={metric.value}
                   duration={2.5}
                   decimals={metric.value % 1 !== 0 ? 1 : 0}
-                  suffix={metric.suffix} // now empty
+                  suffix={metric.suffix}
                   enableScrollSpy
                   scrollSpyOnce
                 />
@@ -75,7 +75,7 @@ const Metrics = () => {
               <h3 className="text-xl font-semibold text-white mb-3">
                 {metric.title}
               </h3>
-              <p className="text-gray-300 text-sm mb-3 leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 {metric.description}
               </p>
             </motion.div>
