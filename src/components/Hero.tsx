@@ -2,6 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
+const lines = ["DevOps Automation", "Suite"]; // two lines
+
+const letterVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const Hero = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 overflow-hidden">
@@ -17,14 +24,46 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-20 flex flex-col items-center text-center">
         <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            DevOps{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Automation
-            </span>
-            <br /> Suite
-          </h1>
+          {/* Animated Title */}
+          <motion.h1
+            className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight"
+            initial="hidden"
+            animate="visible"
+          >
+            {lines.map((line, lIndex) => (
+              <motion.div
+                key={lIndex}
+                className="block"
+                initial="hidden"
+                animate="visible"
+                transition={{
+                  staggerChildren: 0.08,
+                  delayChildren: lIndex * 0.6,
+                }}
+              >
+                {line.split(" ").map((word, wIndex) => (
+                  <span key={wIndex} className="mr-2 inline-block">
+                    {word.split("").map((char, cIndex) => (
+                      <motion.span
+                        key={cIndex}
+                        variants={letterVariant}
+                        transition={{ duration: 0.3 }}
+                        className={
+                          word === "Automation"
+                            ? "bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent inline-block"
+                            : "inline-block"
+                        }
+                      >
+                        {char}
+                      </motion.span>
+                    ))}
+                  </span>
+                ))}
+              </motion.div>
+            ))}
+          </motion.h1>
 
+          {/* Description */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
             Comprehensive CI/CD pipeline automation with Docker, Kubernetes, and
             Terraform.{" "}
