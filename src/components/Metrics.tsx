@@ -7,21 +7,21 @@ const Metrics = () => {
     {
       title: "Faster Deployments",
       value: 75,
-      suffix: "%",
+      suffix: "", // removed %
       description: "Improvement in deployment speed",
       color: "text-cyan-400",
     },
     {
       title: "Uptime Achieved",
       value: 99.9,
-      suffix: "%",
+      suffix: "", // removed %
       description: "Service availability maintained",
       color: "text-green-400",
     },
     {
       title: "Projects Completed",
       value: 500,
-      suffix: "+",
+      suffix: "", // removed +
       description: "Successful project deliveries",
       color: "text-blue-400",
     },
@@ -30,6 +30,7 @@ const Metrics = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
       <div className="container mx-auto px-6">
+        {/* Section Heading */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 40 }}
@@ -46,8 +47,8 @@ const Metrics = () => {
           </p>
         </motion.div>
 
-        {/* Key Metrics with CountUp */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        {/* Key Metrics */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {metrics.map((metric, index) => (
             <motion.div
               key={index}
@@ -66,7 +67,7 @@ const Metrics = () => {
                   end={metric.value}
                   duration={2.5}
                   decimals={metric.value % 1 !== 0 ? 1 : 0}
-                  suffix={metric.suffix}
+                  suffix={metric.suffix} // now empty
                   enableScrollSpy
                   scrollSpyOnce
                 />
@@ -80,23 +81,6 @@ const Metrics = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Call to Action */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <motion.button
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Schedule DevOps Consultation
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   );
