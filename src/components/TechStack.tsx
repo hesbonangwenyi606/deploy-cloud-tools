@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
 
 const TechStack = () => {
   const technologies = [
@@ -11,7 +12,7 @@ const TechStack = () => {
       ]
     },
     {
-      category: "Orchestration", 
+      category: "Orchestration",
       tools: [
         { name: "Kubernetes", description: "Container orchestration platform", level: 92 },
         { name: "Docker Swarm", description: "Native Docker clustering", level: 78 },
@@ -55,25 +56,47 @@ const TechStack = () => {
   return (
     <section className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        {/* Section Heading */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Technology <span className="text-cyan-400">Expertise</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive mastery of industry-leading DevOps tools and platforms
           </p>
-        </div>
+        </motion.div>
 
+        {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((category, index) => (
-            <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+            <motion.div
+              key={index}
+              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+            >
               <h3 className="text-xl font-bold text-cyan-400 mb-6 text-center">
                 {category.category}
               </h3>
               
               <div className="space-y-4">
                 {category.tools.map((tool, toolIndex) => (
-                  <div key={toolIndex} className="group">
+                  <motion.div
+                    key={toolIndex}
+                    className="group"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.6, delay: toolIndex * 0.2 }}
+                    viewport={{ once: true }}
+                  >
                     <div className="flex justify-between items-center mb-2">
                       <h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
                         {tool.name}
@@ -82,43 +105,66 @@ const TechStack = () => {
                         {tool.level}%
                       </span>
                     </div>
-                    
+
                     <p className="text-sm text-gray-400 mb-3">
                       {tool.description}
                     </p>
-                    
-                    <div className="w-full bg-gray-700 rounded-full h-2">
-                      <div 
-                        className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${tool.level}%` }}
-                      ></div>
+
+                    <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                      <motion.div
+                        className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${tool.level}%` }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                      />
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Integration Showcase */}
-        <div className="mt-16 bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+        <motion.div
+          className="mt-16 bg-gray-800/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
             Integrated DevOps Workflow
           </h3>
-          
+
           <div className="flex flex-wrap justify-center items-center gap-4 text-center">
             {["Git", "Jenkins", "Docker", "Kubernetes", "Terraform", "AWS", "Monitoring"].map((step, index) => (
               <React.Fragment key={step}>
-                <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold">
+                <motion.div
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                >
                   {step}
-                </div>
+                </motion.div>
                 {index < 6 && (
-                  <div className="text-cyan-400 text-xl">→</div>
+                  <motion.div
+                    className="text-cyan-400 text-xl"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.25 }}
+                    viewport={{ once: true }}
+                  >
+                    →
+                  </motion.div>
                 )}
               </React.Fragment>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
