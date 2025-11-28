@@ -115,15 +115,10 @@ Set environment variables (MONGO_URI, PORT)
 
 Deploy server folder separately
 
-🔍 Linting & Code Quality
-
+## Linting & Code Quality
 Run ESLint:
-
 npm run lint
-
-
 Format using Prettier:
-
 npm run format
 
 ## Contributing
