@@ -50,7 +50,7 @@ deploy-cloud-tools/
 │   └── package.json
 └── README.md
 
-⚙️ Installation & Setup
+## Installation & Setup
 1. Clone the repository
 git clone https://github.com/your-username/deploy-cloud-tools.git
 cd deploy-cloud-tools
