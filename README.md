@@ -51,7 +51,7 @@ cd deploy-cloud-tools
 2️⃣ Install dependencies
 npm install
 
-3️⃣ Start development server
+## Start development server
 npm run dev
 
 ## Build for production
