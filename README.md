@@ -61,13 +61,9 @@ npm install
 npm run dev            # Start development server
 
 
-Build for production:
-
+## Build for production:
 npm run build
-
-
 Preview production build:
-
 npm run preview
 
 ## Setup Backend
