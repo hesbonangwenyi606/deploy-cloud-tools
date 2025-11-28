@@ -85,13 +85,10 @@ npm run format
 
 🤝 Contributing
 
-Contributions are welcome!
+## Contributions are welcome!
 To contribute:
-
 Fork the repo
-
 Create a feature branch
-
 Submit a pull request
 
 ## License
