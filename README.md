@@ -103,16 +103,11 @@ vercel
 
 
 Netlify:
-
 npm install -g netlify-cli
 netlify deploy
-
 Backend (Node.js + MongoDB)
-
 Use any Node.js hosting (Render, Railway, Heroku)
-
 Set environment variables (MONGO_URI, PORT)
-
 Deploy server folder separately
 
 ## Linting & Code Quality
