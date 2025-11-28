@@ -55,7 +55,7 @@ deploy-cloud-tools/
 git clone https://github.com/your-username/deploy-cloud-tools.git
 cd deploy-cloud-tools
 
-2. Setup Frontend
+## Setup Frontend
 cd client
 npm install
 npm run dev            # Start development server
