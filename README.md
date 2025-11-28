@@ -48,7 +48,7 @@ deploy-cloud-tools/
 git clone https://github.com/your-username/deploy-cloud-tools.git
 cd deploy-cloud-tools
 
-2️⃣ Install dependencies
+## Install dependencies
 npm install
 
 ## Start development server
