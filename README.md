@@ -54,7 +54,7 @@ npm install
 3️⃣ Start development server
 npm run dev
 
-4️⃣ Build for production
+Build for production
 npm run build
 
 ## Preview the production build
