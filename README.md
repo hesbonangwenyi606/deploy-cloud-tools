@@ -94,7 +94,6 @@ Create a feature branch
 
 Submit a pull request
 
-📄 License
-
+## License
 This project is licensed under the MIT License.
 Feel free to modify and use it for personal or commercial projects.
