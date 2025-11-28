@@ -70,36 +70,24 @@ Preview production build:
 
 npm run preview
 
-3. Setup Backend
+## Setup Backend
 cd ../server
 npm install
 
 
 Create .env file with your MongoDB connection:
-
 MONGO_URI=mongodb+srv://<username>:<password>@<cluster-name>.mongodb.net/cloudtools?retryWrites=true&w=majority&appName=Cluster0
 PORT=5000
 
 
 Start development server:
-
 npm run dev
 
-🔗 Connecting Frontend to Backend
-
+## Connecting Frontend to Backend
 In your frontend, make API calls to:
-
 const res = await fetch("http://localhost:5000/api/tools");
 const data = await res.json();
 console.log(data);
-
-🚢 Deployment
-Frontend (Vite)
-
-Vercel:
-
-npm i -g vercel
-vercel
 
 
 Netlify:
