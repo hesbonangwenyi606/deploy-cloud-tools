@@ -72,15 +72,10 @@ Example (Netlify):
 npm install -g netlify-cli
 netlify deploy
 
-🧪 Linting & Code Quality
-
+## Linting & Code Quality
 Run ESLint:
-
 npm run lint
-
-
 Format using Prettier:
-
 npm run format
 
 ## Contributions are welcome!
