@@ -83,8 +83,6 @@ Format using Prettier:
 
 npm run format
 
-🤝 Contributing
-
 ## Contributions are welcome!
 To contribute:
 Fork the repo
