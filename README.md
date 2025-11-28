@@ -3,31 +3,15 @@ Deploy Cloud Tools
 A React + TypeScript + Vite project designed to provide cloud deployment utilities, automation workflows, and a modern developer experience.
 This template includes hot module replacement (HMR), ESLint rules, and a clean, scalable folder structure.
 
-🚀 Features
-
+## Features
 ⚡ Vite for ultra-fast development and build performance
-
 ⚛️ React 18 with TypeScript
-
 🔥 Hot Module Replacement (HMR)
-
 ✅ ESLint + Prettier setup for clean, consistent code
-
 📁 Organized folder structure for scalability
 
-🌐 Ready for deployment on platforms like:
 
-Vercel
-
-Netlify
-
-Cloudflare Pages
-
-AWS Amplify
-
-GitHub Pages
-
-📦 Project Structure
+## Project Structure
 deploy-cloud-tools/
 ├── src/
 │   ├── components/
@@ -43,8 +27,8 @@ deploy-cloud-tools/
 ├── package.json
 └── README.md
 
-🛠️ Installation & Setup
-1️⃣ Clone the repository
+## nstallation & Setup
+Clone the repository
 git clone https://github.com/your-username/deploy-cloud-tools.git
 cd deploy-cloud-tools
 
